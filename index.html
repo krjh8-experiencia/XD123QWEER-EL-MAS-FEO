@@ -1,310 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-            <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <meta name="description" content="Online decompiler for Java, Android, Python and C#.">
-        <meta name="author" content="">
-        
-        <link rel="icon" href="/favicon.ico">
-
-        <title>Java decompiler online / APK decompiler - Decompiler.com</title>
-
-        <link rel="stylesheet" media="screen" href="stylesheets/main.css">
-        <link rel="stylesheet" media="screen" href="stylesheets/dropzone.css">
-        <script src="https://www.codicibancari.it/javascripts/ads/prebid/ads/unbid/ads/rebid/prebid-ads/gbid/ads-prebid/bid/facn.js" type="text/javascript"></script>
-
-
-
-
-            <!-- Bootstrap core CSS -->
-        <link rel="stylesheet" media="screen" href="stylesheets/bootstrap.min.css">
-
-            <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-            <!--<link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">-->
-
-            <!-- Custom styles for this template -->
-            <!--<link href="navbar-static-top.css" rel="stylesheet">-->
-
-            <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-            <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-            <!--<script src="../../assets/js/ie-emulation-modes-warning.js"></script>-->
-
-            <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-            <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <!-- <script data-cfasync="false" async src="https://s.nitropay.com/ads-1502.js" data-log-level="silent"></script> -->
-    
-        <script src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
+        <meta name="author" content="leonardosnt (https://github.com/leonardosnt)">
+        <link rel="dns-prefetch" href="https://jdec.herokuapp.com">
+        <link rel="dns-prefetch" href="https://google-analytics.com">
+        <link rel="dns-prefetch" href="https://browser.sentry-cdn.com">
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+        <title>JDec - Java Decompiler Online</title>
+        <meta name="title" content="JDec - Java Decompiler Online">
+        <meta name="description" content="JDec is a online Java decompiler that provides a fast way to decompile JAR files. Instant access to the files, no need to wait. Also supports downloading decompiled java code.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://jdec.app/">
+        <meta property="og:title" content="JDec - Java Decompiler Online">
+        <meta property="og:description" content="JDec is a online Java decompiler that provides a fast way to decompile JAR files. Instant access to the files, no need to wait. Also supports downloading decompiled java code.">
+        <meta property="og:image" content="https://jdec.app/card-image.png">
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://jdec.app/">
+        <meta property="twitter:title" content="JDec - Java Decompiler Online">
+        <meta property="twitter:description" content="JDec is a online Java decompiler that provides a fast way to decompile JAR files. Instant access to the files, no need to wait. Also supports downloading decompiled java code.">
+        <meta property="twitter:image" content="https://jdec.app/card-image.png">
+        <meta name="google-site-verification" content="y4TDOAmHa8pXUKV8y7tvIBGLhmRnaU_hqbaqx9oYf0c">
+        <link href="/app.ae05fb60.css" rel="stylesheet">
         <script>
-                ethicalads.wait.then((placements) => {
-                    if (!placements.length) {
-
-                        var head = document.getElementsByTagName('head')[0];
-
-                        var script = document.createElement('script');
-                        script.src = "https://s.nitropay.com/ads-1502.js";
-                        script.type = 'text/javascript';
-
-                        head.appendChild(script);
-
-                        div = document.querySelector('[data-ea-publisher]')
-                        div.innerHTML = '<div id="dec-now"></div>'
-                        window.nitroAds=window.nitroAds||{createAd:function(){return new Promise(e=>{window.nitroAds.queue.push(["createAd",arguments,e])})},addUserToken:function(){window.nitroAds.queue.push(["addUserToken",arguments])},queue:[]};
-                        window['nitroAds'].createAd('dec-now',{"refreshLimit": 20, "refreshTime": 60, "renderVisibleOnly": false, "refreshVisibleOnly": true, "sizes": [ [ "728", "90" ]], "report":{"enabled": true, "icon": true, "wording": "Report Ad", "position": "top-right"}});
-                    }
-                });
+            !function(e, a, t, n, g, c) {
+                e.GoogleAnalyticsObject = n,
+                e.ga = e.ga || function() {
+                    (e.ga.q = e.ga.q || []).push(arguments)
+                }
+                ,
+                e.ga.l = +new Date,
+                g = a.createElement(t),
+                c = a.getElementsByTagName(t)[0],
+                g.async = 1,
+                g.src = "https://www.google-analytics.com/analytics.js",
+                c.parentNode.insertBefore(g, c)
+            }(window, document, "script", "ga"),
+            ga("create", "UA-81494650-3", "auto"),
+            ga("send", "pageview");
         </script>
-    
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9WWCS2LLPE"></script>
-    <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'UA-256040966-2');
-            gtag('config', 'G-9WWCS2LLPE');
-    </script>
     </head>
-
     <body>
-        
-
-    
-<!-- Static navbar -->
-<nav class="navbar navbar-default navbar-static-top">
-    <div class="container">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="/"><span style="color: red">De</span><span style="color: black">compiler<span>.</span>com</span></a>
-        </div>
-        <div id="navbar">
-            <ul class="nav navbar-nav navbar-left">
-                <li ><a href="/jar-string-editor">JAR String Editor</a></li>
-            </ul>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li ><a href="/release-notes">Release Notes</a></li>
-                <li><a href="mailto:support@decompiler.com?subject=Bug%20report%2C%20feature%20request%2C%20suggestion.">support@decompiler.com</a> </li>
-            </ul>
-        </div>
-            <!--
-            //TODO
-        <div id="navbar" class="navbar-collapse collapse">
-
-            <ul class="nav navbar-nav">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your uploads <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">i-Text2.jar</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="../navbar/">Default</a></li>
-                <li class="active"><a href="./">Static top <span class="sr-only">(current)</span></a></li>
-                <li><a href="../navbar-fixed-top/">Fixed top</a></li>
-            </ul>
-        </div>--><!--/.nav-collapse -->
-    </div>
-</nav>
-    <script src="javascripts/dropzone.js" type="text/javascript"></script>
-    <div class="container">
-        
-        
-        
-     
-<form action="/upload" method="POST" id="myDropZone" class="dropzone needsclick dz-clickable" enctype="multipart/form-data">
-    
-
-        <input type="hidden" name="csrfToken" value="92f1820d6739f800006f08caacb7766e64d99312-1767674908400-332b97fb15926cb73c0082c6"/>
-
-        <div class="dz-message needsclick">
-            Drop EXE or DLL, <br />JAR or CLASS, <br />APK, XAPK or DEX, <br />PYC or PYO, <br />LUAC or LUB, <br />SMX or AMXX file here<br />
-            <span style="text-decoration:underline;">Choose file</span>
-        </div>
-
-        <div class="fallback">
-            <input name="file" type="file" multiple />
-        </div>
-
-    
-</form>
-
-
-    <script type="text/javascript">
-            if (document.getElementById('myDropZone')) {
-                Dropzone.autoDiscover = false;
-                var myDropzone = new Dropzone("#myDropZone", {
-                    url: "/upload",
-                    timeout: 500000,
-                    maxFiles: 1,
-                    previewTemplate: "<div class=\"jumbotron\">\n" +
-                            "            <div class=\"progress\">\n" +
-                            "                <div id=\"upload-progress\" class=\"progress-bar progress-bar-striped active\" role=\"progressbar\"\n" +
-                            "                aria-valuenow=\"0\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width:0%\">\n" +
-                            "                    Uploading 0%\n" +
-                            "                </div>\n" +
-                            "            </div>\n" +
-                            "            <div class=\"progress\">\n" +
-                            "                <div id=\"decompile-progress\" class=\"progress-bar progress-bar-striped active\" role=\"progressbar\"\n" +
-                            "                aria-valuenow=\"0\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width:0%\">\n" +
-                            "                    Decompiling 0%\n" +
-                            "                </div>\n" +
-                            "            </div>\n" +
-                            "        </div>"
-                });
-                myDropzone.on("success", function(file) {
-                    window.location.replace(file.xhr.response);
-                    /*alert(file.xhr.response);*/
-                    /* Maybe display some more file information on your page */
-                });
-                myDropzone.on("uploadprogress", function(file){
-                    //alert(file.upload.progress);
-                    if (file.upload.progress < 100) {
-
-                        //alert(file.upload.progress);
-                    }
-                    var uploadProgressBar = document.querySelector('#upload-progress');
-                    uploadProgressBar.style.width = file.upload.progress + '%';
-                    uploadProgressBar.innerHTML = "Uploading "+ file.upload.progress + '%';
-                    if (file.upload.progress == 100) {
-                        //alert(file.size);
-                        var progressBar = document.querySelector('#decompile-progress'),
-                                width = 0;
-
-                        progressBar.style.width = width + '%';
-
-                        var interval = setInterval(function() {
-
-                            width += 1;
-
-                            progressBar.style.width = width + '%';
-                            progressBar.innerHTML = "Decompiling " + width + '%';
-
-                            if (width >= 100) {
-                                clearInterval(interval);
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <div id="select_file">
+            <div class="row center header">
+                <h5>Online Java Decompiler</h5>
+            </div>
+            <div class="row center">
+                <div class="col s12 m4 l2"></div>
+                <div class="col s12 m4 l8">
+                    <div id="upload_box" class="box" tabindex="0">
+                        <p id="upload_desc" class="no-select">
+                            Click to select a file, or drag and drop it here (<b>.class</b>
+                            or <b>.jar</b>
+                            )
+                        </p>
+                        <img class="upload_icon no-select" src="/cloud.6036d232.png" alt="Upload icon">
+                    </div>
+                    <div class="col s12 m4 l2"></div>
+                </div>
+            </div>
+            <input type="file" id="file-input" accept=".jar,.class" multiple name="file" style="display:none;">
+            <div class="row center footer">
+                <div style="margin-bottom:10px;height:36px;">
+                    <a href="https://ko-fi.com/leonardosnt" target="_blank" rel="noopener">
+                        <style>
+                            .kofi_placeholder {
+                                background: url("data:image/svg+xml;charset=utf-8,%3Csvg width='223' height='30' xmlns='http://www.w3.org/2000/svg'%3E%3Crect fill='%2300aeef' width='223' height='30' rx='8'/%3E%3Cpath d='M41.418 7h1.608c3.1 0 5.614 2.514 5.614 5.614v.33a5.615 5.615 0 01-5.614 5.615h-1.608v1.69a2.591 2.591 0 01-2.591 2.591H26.59A2.591 2.591 0 0124 20.249V8.296C24 7.58 24.58 7 25.296 7h16.122zm0 2.997v5.565h1.466a2.783 2.783 0 100-5.565h-1.466z' fill='%23FFF'/%3E%3Cpath d='M32.36 12.277c.4-1.171 1.349-1.757 2.846-1.757 2.245 0 3.078 2.794 1.9 4.62-.784 1.218-2.366 2.758-4.746 4.62-2.38-1.862-3.962-3.402-4.747-4.62-1.177-1.826-.344-4.62 1.901-4.62 1.497 0 2.446.586 2.846 1.757z' fill='%23FF5E5B'/%3E%3C/svg%3E") no-repeat;
+                                display: inline-block;
+                                width: 223px;
+                                height: 30px
                             }
-                        }, 300);
-                    }
-                });
-            } else {
-                alert('lol');
-            }
-    </script>
-    </div> <!-- /container -->
-
-    <div class="container" style="min-height: 105px">
-    <div data-ea-publisher="decompilercom" data-ea-type="text" id="banner"></div>
-</div>
-
-    
-
-    <br>
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="feature">
-                    <img src="/assets/images/dragdrop.svg" alt="Java decompiler" height="100 px">
-                    <h4>Upload your artifact</h4>
-                    <p>Drag and drop your artifact into the online decompiler to view the content online or download it.</p>
+                        </style>
+                        <img class="kofi_placeholder" alt="Support me on Ko-Fi" src="/ko-fi.11b2c97f.svg">
+                    </a>
                 </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="feature">
-                    <img src="/assets/images/cloud.svg" alt="Online decompiler" height="100 px">
-                    <h4>All online</h4>
-                    <p>Navigate through and inspect decompiled code online without installing anything.</p>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="feature">
-                    <img src="/assets/images/cvbf.svg" alt="C# decompiler" height="100 px">
-                    <h4>F#, Visual Basic, C# decompiler</h4>
-                    <p>.exe and .dll .NET decompilation back to C# project.</p>
-                </div>
+                <h6>
+                    Copyright © 2022 <a href="https://github.com/leonardosnt" target="blank" rel="noopener">leonardosnt</a>
+                    | <a title="jdec.feedback@gmail.com" href="mailto:jdec.feedback@gmail.com">contact</a>
+                </h6>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="feature">
-                    <img src="/assets/images/java.svg" alt="Java decompiler" height="100 px">
-                    <h4>Java decompiler</h4>
-                    <p>.jar and .class decompilation back to Java source code.</p>
+        <div id="browse_files" class="row" style="display:none;">
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="/" class="brand-logo no-select" tabindex="-1">JDec</a>
+                    <div class="nav-right-container">
+                        <a id="opened-file" class="no-select" href="#" style="display:none;">
+                            <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" width="15.5" height="15.5" viewBox="0 0 433.5 433.5">
+                                <path d="M395.25 153h-102V0h-153v153h-102l178.5 178.5L395.25 153zm-357 229.5v51h357v-51h-357z"/>
+                            </svg>
+                            <span></span>
+                        </a>
+                    </div>
                 </div>
+            </nav>
+            <div class="col s12 m4 l3 tree-container">
+                <div id="tree"></div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="feature">
-                    <img src="/assets/images/android.svg" alt="Android decompiler" height="100 px">
-                    <h4>Android decompiler</h4>
-                    <p>.apk, .xapk and .dex decompilation back to Java source code.</p>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="feature">
-                    <img src="/assets/images/python.svg" alt="Python decompiler" height="100 px">
-                    <h4>Python decompiler</h4>
-                    <p>.pyc and .pyo decompilation back to Python source code.</p>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="feature">
-                    <img src="/assets/images/lua.svg" alt="Lua decompiler" height="100 px">
-                    <h4>Lua decompiler</h4>
-                    <p>.luac and .lub decompilation back to Lua source code.</p>
-                </div>
+            <div class="col s12 m8 l9 code-container">
+                <div id="code-loading-info" class="no-select">Decompiling...</div>
+                <pre id="code" tabindex="0"></pre>
             </div>
         </div>
-    </div> <!-- /container -->
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
-        <!--<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>-->
-        <!--<script src="../../dist/js/bootstrap.min.js"></script>-->
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-        <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>-->
-
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js" crossorigin="anonymous" defer></script>
+        <script src="/app.c123ef1a.js" defer></script>
+        <link href="/prism.54faa53d.css" rel="stylesheet">
+        <script src="/prism.ad515e31.js" defer></script>
         <script>
-            if( window.mxxeq === undefined ){
-                function disableLink(linkId) {
-                    var link = document.getElementById(linkId);
-                    if (link) {
-                        link.classList.add("disabled-link");
-                        link.href = "#";
-                    }
+            !function() {
+                var e = window.navigator.userAgent;
+                if (window.document.documentMode || -1 !== e.indexOf("MSIE ") || e.match(/Trident.*rv\:11\./)) {
+                    var t = document.createElement("div");
+                    t.style.position = "absolute",
+                    t.style.top = "0px",
+                    t.style.backgroundColor = "rgba(214, 48, 49, 0.9)",
+                    t.style.color = "white",
+                    t.style.padding = "3px",
+                    t.innerText = "Internet Explorer is not supported! Please use a modern browser.",
+                    document.body.appendChild(t)
                 }
-                function replaceSubmitWithAlertButton(submitButtonId, alertMessage) {
-                    var oldButton = document.getElementById(submitButtonId);
-
-                    if (oldButton) {
-                        var newButton = document.createElement("button");
-                        newButton.textContent = oldButton.value;
-                        newButton.className = oldButton.className;
-                        newButton.id = oldButton.id;
-                        newButton.type = "button";
-
-                        // Add click event to show alert
-                        newButton.addEventListener("click", function() {
-                            alert(alertMessage);
-                        });
-
-                        oldButton.parentNode.replaceChild(newButton, oldButton);
-                    }
-                }
-                replaceSubmitWithAlertButton("download_zip_button", "Download is blocked by an advertisement filtering extension in your browser. Please disable it and reload the page.");
-                disableLink("firstDownloadFileLink");
-                disableLink("secondDownloadFileLink");
-            }
+            }();
         </script>
-
+        <script>
+            var element = document.createElement('div');
+            element.style = "text-align:center;margin-top:20px;";
+            element.innerHTML = `<a target="_blank" href="https://www.digitalocean.com/?refcode=e34ccb52f471&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge">Get <b style="text-decoration: underline; text-underline-offset: 2px">$200 in free credits</b> on DigitalOcean and help JDec stay online!</a>`
+            var input = document.getElementById('file-input');
+            input.parentNode.insertBefore(element, input.nextSibling);
+        </script>
     </body>
 </html>
